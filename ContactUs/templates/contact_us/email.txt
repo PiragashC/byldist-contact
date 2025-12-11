@@ -1,0 +1,13 @@
+New contact submission
+
+Name: {{ name }}
+Email: {{ email }}
+Company/Studio: {{ company }}
+Role: {{ role }}
+Project location: {{ project_location }}
+Project type: {{ project_type }}
+Timeline: {{ start_timeline }}
+
+Project brief:
+{{ project_brief }}
+
