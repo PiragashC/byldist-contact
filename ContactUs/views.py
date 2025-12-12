@@ -59,6 +59,15 @@ class ContactSubmissionCreateView(GenericAPIView):
         text_body = render_to_string("contact_us/email.txt", context)
         html_body = render_to_string("contact_us/email.html", context)
 
+        msg = "Sending email via {}:{} | TLS={} | SSL={} | User={}".format(
+            getattr(settings, 'EMAIL_HOST', 'unknown'),
+            getattr(settings, 'EMAIL_PORT', 'unknown'),
+            getattr(settings, 'EMAIL_USE_TLS', 'unknown'),
+            getattr(settings, 'EMAIL_USE_SSL', 'unknown'),
+            getattr(settings, 'EMAIL_HOST_USER', '')[:3] + '***'  # Masked
+        )
+        print(msg) # Printing to stdout for Render logs
+
         message = EmailMultiAlternatives(
             subject=subject,
             body=text_body,
