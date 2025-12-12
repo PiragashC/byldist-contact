@@ -5,6 +5,7 @@ from django.conf import settings
 from django.core.mail import EmailMultiAlternatives
 from django.template.loader import render_to_string
 from rest_framework import status
+from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework.generics import GenericAPIView
 
@@ -77,3 +78,9 @@ class ContactSubmissionCreateView(GenericAPIView):
         )
         message.attach_alternative(html_body, "text/html")
         message.send(fail_silently=False)
+
+
+
+@api_view(['GET'])
+def health_check(request):
+    return Response({"status": "ok"}, status=status.HTTP_200_OK)
