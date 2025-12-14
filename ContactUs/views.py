@@ -83,4 +83,5 @@ class ContactSubmissionCreateView(GenericAPIView):
 
 @api_view(['GET'])
 def health_check(request):
+    print("Health check ping received")
     return Response({"status": "ok"}, status=status.HTTP_200_OK)
