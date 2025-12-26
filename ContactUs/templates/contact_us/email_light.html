@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Byldist - Inquiry</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body style="margin:0; padding:0; background-color:#ffffff; font-family: Arial, Helvetica, sans-serif; color:#000000;">
+    <table width="100%" cellpadding="0" cellspacing="0" style="
+      background-color:#ffffff;
+      background-image:
+        linear-gradient(to right, rgba(0,0,0,0.05) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(0,0,0,0.05) 1px, transparent 1px);
+      background-size:50px 50px;
+      padding:24px;
+    ">
+        <tr>
+            <td align="center">
+                <table width="100%" cellpadding="0" cellspacing="0"
+                    style="max-width:680px; background-color:#ffffff; border:1px solid #000000;">
+                    <tr>
+                        <td style="padding:20px 32px; border-bottom:1px solid #000000;">
+                            <table width="100%" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td align="left">
+                                        <img src="https://i.ibb.co/F4YDJ4k9/logo.png" alt="Byldist Logo" width="120"
+                                            style="display:block; max-width:120px;" />
+                                    </td>
+                                    <td align="right"
+                                        style="font-size:12px; letter-spacing:1px; text-transform:uppercase;">
+                                        <span style="background-color:#ccff00; padding:6px 10px; font-weight:bold;">
+                                            New Inquiry
+                                        </span>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding:32px;">
+                            <h1 style="margin:0; font-size:22px; font-weight:600; line-height:1.4;">
+                                New Contact Form Submission
+                            </h1>
+                            <p style="margin:12px 0 0; font-size:14px; line-height:1.6; color:#333333;">
+                                A new project inquiry has been submitted via the Byldist website.
+                                Below are the full details provided by the client.
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding:0 32px;">
+                            <div style="height:1px; background-color:#000000;"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding:32px;">
+                            <table width="100%" cellpadding="0" cellspacing="0"
+                                style="font-size:14px; line-height:1.6;">
+                                <tr>
+                                    <td style="padding:10px 0; font-weight:bold;">Name</td>
+                                    <td style="padding:10px 0;">{{name}}</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding:10px 0; font-weight:bold;">Email</td>
+                                    <td style="padding:10px 0;">
+                                        <a href="mailto:{{email}}" style="color:#000000; text-decoration:none;">
+                                            {{email}}
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding:10px 0; font-weight:bold;">Company / Studio</td>
+                                    <td style="padding:10px 0;">{{company}}</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding:10px 0; font-weight:bold;">Role</td>
+                                    <td style="padding:10px 0;">{{role}}</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding:10px 0; font-weight:bold;">Project Location</td>
+                                    <td style="padding:10px 0;">{{project_location}}</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding:10px 0; font-weight:bold;">Project Type</td>
+                                    <td style="padding:10px 0;">{{project_type}}</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding:10px 0; font-weight:bold;">Approximate Start Timeline</td>
+                                    <td style="padding:10px 0;">{{timeline}}</td>
+                                </tr>
+                            </table>
+                            <div style="margin-top:28px;">
+                                <div style="font-weight:bold; margin-bottom:10px;">
+                                    Project Brief
+                                </div>
+                                <div style="
+                background-color:#f7f7f7;
+                border-left:4px solid #ccff00;
+                padding:16px;
+                font-size:14px;
+                line-height:1.7;
+              ">
+                                    {{project_brief}}
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding:28px 32px; border-top:1px solid #000000; font-size:12px; color:#555555;">
+                            © Byldist — Contact Form Notification
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>

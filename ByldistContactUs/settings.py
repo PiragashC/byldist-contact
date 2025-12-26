@@ -31,7 +31,7 @@ SECRET_KEY = 'django-insecure-suh3g_oizsq9a5qhb2@=@nxqb=453rs4dfja^h8iwctf^r45u^
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DEBUG', 'True') == 'True'
 
-ALLOWED_HOSTS = ['aurasyntax.pythonanywhere.com', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['aurasyntax.pythonanywhere.com', 'localhost', '127.0.0.1', 'byldist.com', 'www.byldist.com']
 
 # Add Render if available
 RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
@@ -40,6 +40,8 @@ if RENDER_EXTERNAL_HOSTNAME:
 
 CORS_ALLOWED_ORIGINS = [
     "https://byldist.vercel.app",
+    "https://byldist.com",
+    "https://www.byldist.com",
 ]
 
 

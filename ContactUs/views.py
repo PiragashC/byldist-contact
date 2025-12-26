@@ -53,12 +53,19 @@ class ContactSubmissionCreateView(GenericAPIView):
             "role": submission.get_role_display() or "N/A",
             "project_location": submission.project_location or "N/A",
             "project_type": submission.get_project_type_display() or "N/A",
-            "start_timeline": submission.get_start_timeline_display() or "N/A",
+            "timeline": submission.get_start_timeline_display() or "N/A",
             "project_brief": submission.project_brief,
         }
 
+        # Choose template based on request data if available (defaults to dark)
+        theme = self.request.data.get('theme', 'dark').lower()
+        if theme == 'light':
+            template_name = "contact_us/email_light.html"
+        else:
+            template_name = "contact_us/email_dark.html"
+
         text_body = render_to_string("contact_us/email.txt", context)
-        html_body = render_to_string("contact_us/email.html", context)
+        html_body = render_to_string(template_name, context)
 
         msg = "Sending email via {}:{} | TLS={} | SSL={} | User={}".format(
             getattr(settings, 'EMAIL_HOST', 'unknown'),

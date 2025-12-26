@@ -6,7 +6,7 @@ Company/Studio: {{ company }}
 Role: {{ role }}
 Project location: {{ project_location }}
 Project type: {{ project_type }}
-Timeline: {{ start_timeline }}
+Timeline: {{ timeline }}
 
 Project brief:
 {{ project_brief }}
